@@ -1,0 +1,63 @@
+:root {
+  --c-bg-p: #f5f5f5;
+  --c-abs-p: #fff;
+  --c-text-head-p: #333333;
+  --c-text-parag-p: #4f4f4f;
+  --c-text-parag-o-p: #828282;
+  --c-disable-p: #bdbdbd;
+  --c-pre-p: #6719bc;
+  --c-purple-a-p: #9b51e0;
+  --c-pre-o-p: #fcf5ff;
+  --c-border-p: #ebecf2;
+  --br-p: 8px;
+  --br-i-p: 5px;
+  --fs-normal-p: 0.875rem;
+  --fs-important-p: 1.25rem;
+  --fs-important-sub-p: 1rem;
+  --fs-classic-p: 0.75rem;
+  --fs-small-p: 0.7rem;
+  --gap-sec-p: 50px;
+  --gap-main-p: 15px;
+  --nav-height-p: 52px;
+  --ease-p: cubic-bezier(0.5, -1.5, 0.5, 2);
+  --container-size: 1000px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1300px) {
+}
+@media screen and (max-width: 650px) {
+  :root {
+    --br-p: 7px;
+    --br-i-p: 4px;
+    --fs-normal-p: 0.86rem;
+    --fs-important-p: 1.2rem;
+    --fs-important-sub-p: 0.95rem;
+    --fs-classic-p: 0.7rem;
+    --fs-small-p: 0.65rem;
+    --gap-sec-p: 40px;
+    --gap-main-p: 10px;
+    --nav-height-p: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  :root {
+    --fs-normal-p: 0.86rem;
+    --fs-important-p: 1.2rem;
+    --fs-important-sub-p: 0.95rem;
+    --fs-classic-p: 0.7rem;
+    --fs-small-p: 0.65rem;
+    --gap-sec-p: 30px;
+    --gap-main-p: 5px;
+    --nav-height-p: 50px;
+  }
+}
