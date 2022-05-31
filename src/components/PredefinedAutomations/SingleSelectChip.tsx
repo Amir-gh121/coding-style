@@ -113,8 +113,8 @@ const SingleSelectChip: React.FC<SwitchChipType> = ({
         <div
           className={
             selectedOptions.length > 0
-              ? "pre-defined-filter noselect side-nav-entrance active select-chip"
-              : "pre-defined-filter noselect side-nav-entrance select-chip"
+              ? "pre-defined-filter single noselect side-nav-entrance active select-chip"
+              : "pre-defined-filter single noselect side-nav-entrance select-chip"
           }
           style={
             {

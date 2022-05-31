@@ -125,6 +125,9 @@
   position: relative;
   transition: all ease 0.3s;
 }
+.pre-defined-filter.single {
+  z-index: -1;
+}
 .pre-defined-filter > svg {
   height: 15px;
   width: 15px;
