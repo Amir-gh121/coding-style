@@ -138,11 +138,7 @@ const MultiSelectChip: React.FC<SwitchChipType> = ({
           </div>
         )}
       </div>
-      {selectedOptions.length > 0 && (
-        <div className="filter-list-wrapper">
-          {filterListHandler(selectedOptions)}
-        </div>
-      )}
+      {selectedOptions.length > 0 && filterListHandler(selectedOptions)}
     </>
   )
 }
