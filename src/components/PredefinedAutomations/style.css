@@ -102,12 +102,19 @@
 }
 .filter-wrapper {
   width: 100%;
-  display: flex;
-  gap: var(--gap-main-p);
-  margin-block-end: var(--gap-main-p);
   overflow-x: clip;
   position: relative;
   z-index: 1;
+}
+.single-filters-wrapper {
+  display: flex;
+  gap: var(--gap-main-p);
+  margin-block-end: var(--gap-main-p);
+  z-index: 1;
+  padding-inline: 45px;
+  position: relative;
+  left: 0;
+  transition: all linear 0.3s;
 }
 .pre-defined-filter {
   display: flex;
@@ -124,9 +131,6 @@
   cursor: pointer;
   position: relative;
   transition: all ease 0.3s;
-}
-.pre-defined-filter.single {
-  z-index: -1;
 }
 .pre-defined-filter > svg {
   height: 15px;
@@ -204,34 +208,9 @@
 .filter-selection-modal ul > li:last-child {
   border-bottom: none;
 }
-.filter-list-shadow {
-  max-width: 300px;
-  position: relative;
-}
-.filter-list-shadow::before,
-.filter-list-shadow::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 50px;
-  background-image: linear-gradient(to right, #fff, transparent);
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.85;
-}
-.filter-list-shadow::after {
-  left: unset;
-  right: 0;
-  background-image: linear-gradient(to left, #fff, transparent);
-}
 .filter-list-wrapper {
   display: flex;
   gap: var(--gap-main-p);
-  overflow-x: auto;
-  position: relative;
-  max-width: 300px;
 }
 .filter-list-wrapper .pre-defined-filter {
   background-color: transparent;
@@ -240,6 +219,41 @@
   transform: rotate(45deg);
   margin: 0;
   margin-left: 3px;
+}
+.chevron {
+  --size: 30px;
+
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: var(--c-abs-p);
+  padding: 7px;
+  box-sizing: border-box;
+  z-index: 99;
+  border: 1px solid var(--c-disable-p);
+  top: 0;
+  cursor: pointer;
+  opacity: 0.3;
+  pointer-events: none;
+}
+.chevron.active {
+  opacity: 1;
+  pointer-events: initial;
+  box-shadow: 0 1px 3px #0002;
+}
+.chevron.active path {
+  fill: var(--c-pre-p);
+}
+.chevron.right {
+  right: 0;
+}
+.chevron.left {
+  left: 0;
+  transform: rotate(180deg);
+}
+.chevron.left.active {
+  box-shadow: 0 -1px 3px #0002;
 }
 
 @media screen and (max-width: 1000px) {

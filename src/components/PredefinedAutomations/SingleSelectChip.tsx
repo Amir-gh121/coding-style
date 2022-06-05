@@ -1,13 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Scrollbars } from "react-custom-scrollbars"
-import dataType from "./dataType"
-
-interface SwitchChipType {
-  text: string
-  list: string[]
-  setData: React.Dispatch<React.SetStateAction<dataType[]>>
-  noFilter: dataType[]
-}
+import SwitchChipType from "./SwitchChipType"
 
 const SingleSelectChip: React.FC<SwitchChipType> = ({
   text,
