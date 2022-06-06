@@ -131,6 +131,7 @@
   cursor: pointer;
   position: relative;
   transition: all ease 0.3s;
+  inset-inline: 0;
 }
 .pre-defined-filter > svg {
   height: 15px;
